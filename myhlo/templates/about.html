@@ -1,0 +1,58 @@
+
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .diksha{
+            background-color: brown;
+            font-size: larger;
+            text-decoration: dashed;
+            text-shadow: 0cap;
+            text-align: center;
+        }
+        .disha{
+            background-color: red;
+            font-size: medium;
+            text-decoration-line: underline;
+            text-align: center;
+        }
+        .mamta{
+            background-color: blueviolet;
+        }
+         
+
+       
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about page</title>
+</head>
+<body style=" background-image: url('/static/images/download2.jpg');">
+    <div class="diksha">
+    <h1>preet</h1>
+    <h2>diksha</h2>
+    </div>
+    <div class="disha">
+        <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.
+         Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive 
+         for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components 
+         together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. 
+         Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter 
+         and the extensive standard library are available in source or binary form without charge for all major platforms,
+          and can be freely distributed.</p>
+    </div>
+    <div class="mamta">
+        <h3> this is header tag</h3>
+
+    </div>
+    <a href="{% url 'contact' %}">contact</a>
+
+    <a href="/post">post</a>
+    {% url 'cals' as u %}
+    <a href="{{u}}">cals</a>
+
+  
+</body>
+</html>
+{% include 'footer.html' %}

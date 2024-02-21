@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service List</title>
+</head>
+<body>
+    <h1>Service List</h1>
+    <ul>
+        <form  method="get">
+            <input type="text" name="servicename" value=""/>
+            <input type="submit" value="search"/>
+        </form>
+        {% for service in ser %}
+        
+            <li>
+                <h2>{{ service.service_title |upper}}</h2>
+                
+                <p>{{ service.service_desc|slice:":3"  }}</p>
+                <h3>{{service.service_icon}}</h3>
+            </li>
+        {% empty %}
+        no data found
+        {% endfor %}
+    </ul>
+</body>
+</html>

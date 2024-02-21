@@ -1,0 +1,18 @@
+.diksha{
+    background-color: brown;
+    font-size: larger;
+    text-decoration: dashed;
+    text-shadow: 0cap;
+    text-align: center;
+}
+.disha{
+    background-color: red;
+    font-size: medium;
+    text-decoration-line: underline;
+    text-align: center;
+}
+body{
+     background-image: url('/static/images/download.jpeg');
+     background-repeat: no-repeat;
+     background-size: cover;
+}

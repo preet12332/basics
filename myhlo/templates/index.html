@@ -1,0 +1,39 @@
+{% include 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .main{
+            background-color:white;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body  style="background-color: red;">
+
+    <p style="background-color: aqua;text-align: center;font: size 50px;font-weight: 100;">this is class</p>
+    <div class="main">
+    <!-- <a href="/about">about</a> -->
+    
+    <a href="{% url 'contact' %}"> contact</a>
+    {% url 'about' as  jatin %}
+    <a href="{{jatin}}"> about </a>
+    
+    </div>
+    {% for c in clist %}
+    <div>
+        <h3>{{c}}</h3>
+    
+
+        
+
+    </div>
+    {% endfor %}
+    <img src="{% static 'images/download.jpeg'%}" height="200px" width="400px"></img>
+</body>
+</html>
+{% include 'footer.html' %}

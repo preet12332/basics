@@ -1,0 +1,35 @@
+{% include 'header.html' %} 
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>calculator</title> 
+</head> 
+<body> 
+    <div> 
+        <form method="post"> 
+            {% csrf_token %} 
+            <label>value1</label> 
+            <input type="text" name="num1" class="form-control"><br> 
+            <label>select opearations..</label> 
+            <select name="opr" class="form-control"> 
+                <option value="+">+</option> 
+                <option value="-">-</option> 
+                <option value="*">*</option> 
+                <option value="/">/</option> 
+            </select><br> 
+            <label>value2</label> 
+            <input type="text" name="num2" class="form-control"><br> 
+            <button type="submit">calculator</button> 
+             
+            <label>output</label> 
+            <br> 
+            <input type="text"  value="{{output}}" class="form-control"> 
+             
+        </form> 
+    </div> 
+     
+</body> 
+</html> 
+{% include 'footer.html' %}
